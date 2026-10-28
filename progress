@@ -1,1 +1,19 @@
+// download python package 
+sudo apt install python3-escpos
+
+
+// test script 
+from escpos.printer import Usb
+
+p = Usb(0x1d81, 0x5721)
+p.text("Hello from Raspberry Pi!\n")
+p.ln(3)
+p.cut()
+
+// find printer
+lsusb
+
+// run test scirpt
+~/escpos-env/bin/python ~/test_print.py
+
 
