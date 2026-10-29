@@ -8,6 +8,8 @@ A DIY photobooth built on a Raspberry Pi. Press an arcade button, get a 3-2-1 co
 2. A countdown appears on the display (an old phone running RealVNC Viewer).
 3. The camera module takes a photo.
 4. The photo is shown on screen, converted to dithered black and white, and printed.
+
+ ## Hardware 
  
 | Part | Notes |
 |---|---|
