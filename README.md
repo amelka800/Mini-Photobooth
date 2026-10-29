@@ -95,6 +95,7 @@ pinctrl get 21
  
 - Not pressed: `21: ip    -- | hi`
 - Pressed: `21: ip    -- | lo`
+  
 Then test with a script (`button_test.py`):
  
 ```python
@@ -105,6 +106,8 @@ button = Button(21)
 button.when_pressed = lambda: print("Button pressed!")
 pause()
 ```
+
+If youre having issues you can directly run a spare wire through pin 39 to 40, to isolate if th eproblem is with the physical connection or the script
  
 ### 4. Display
  
