@@ -40,6 +40,8 @@ A DIY photobooth built on a Raspberry Pi. Press an arcade button, get a 3-2-1 co
    The `.` at the end means "download into the current folder".
  
 ### 2. Thermal printer
+
+You have to connect the printer to power and seperatly to the Pi which I used through a micro USB data conversion cable (which I had from an old camera). A small light should be present on most printers to show they are on. 
  
 1. Install the Python package:
 ```bash
