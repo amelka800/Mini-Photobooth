@@ -9,3 +9,10 @@ mini photobooth using a Raspberry Pi 3 A+, which takes a picture with a fish hol
 - Arcade style button\
 - alligator clip wires\
 - Micro USB data transfer cable\
+
+- ## Run through
+- screen is idle waiting for butten to be pressed
+- when button is pressed countdown begins and is shown on the display screen 3 2 1..
+- the picture is taken 
+- the picture is printed immediatly after 
+- the screen returns to idle waiting for the button to be pressed and process repeats
