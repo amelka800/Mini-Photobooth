@@ -137,5 +137,5 @@ Press **Esc** to quit.
 | Camera not found | Power off and reseat the ribbon cable at both ends, then check with `rpicam-hello --list-cameras`|
 | Printer doesn't print | Re-check the USB IDs with `lsusb` |
 | Button does nothing | Check `pinctrl get 21` changes when pressed, and that both clips are firmly on the tabs, not the LED tabs |
-| Note when changing components make sure to power off Pi |
+| Changing components | Note when changing components make sure to power off Pi |
  
