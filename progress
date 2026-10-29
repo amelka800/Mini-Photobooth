@@ -1,6 +1,34 @@
+MATERIALS
+> thermal printer 
+> raspberry Pi 3 a+
+> camera module
+> arcade style button 
+> display screen 
+> shoebox box for frame 
+> for any connectors i used alligator clip wires
+
+SETTING UP PARTS 
+
+1. Connect camera to pi 
+
+// physically conencted using a wide cabel 
+
+// download picamzero
+	sudo apt update
+	sudo apt install python3-picamzero
+
+// take the picture (rpicam-still) and save it to the rpi
+	rpicam-still -o ~/Desktop/testimage.jpg
+
+// that saves the picture onto the raspberry pi files, so to see it on my laptop I had to download it from the rpi to my laptop, you need to open a new terminal and the following command will save it 
+
+// taking pic -o where downloading from . signifies download to current folder ie users/ameli
+	rpicam-still -o ~/Desktop/testimage.jpg .
+
+2. Connecting thermal printer 
+
 // download python package 
 sudo apt install python3-escpos
-
 
 // test script 
 from escpos.printer import Usb
@@ -11,9 +39,49 @@ p.ln(3)
 p.cut()
 
 // find printer
-lsusb
+ lsusb
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 1d81:5721 Printer 58A
 
 // run test scirpt
 ~/escpos-env/bin/python ~/test_print.py
+
+// it was annoying me that the command was so long so i added a shebang first line of the test file so it knows what interpreter to use 
+  #!/home/amelka800/escpos-env/bin/python
+
+// then i had to change the permissions 
+chmod +x ~/test_print.py
+
+3. Connect button
+
+// wire it up to pin 39 and 40 
+// check the button is working 
+// not pressed
+pinctrl get 21
+21: ip    -- | hi // GPIO21 = input
+
+// pressed
+pinctrl get 21
+21: ip    -- | lo // GPIO21 = input
+
+// buttom test py file nano 
+from gpiozero import Button
+from signal import pause
+
+button = Button(21)
+button.when_pressed = lambda: print("Button pressed!")
+pause()
+
+4. Connect display
+// i am using an old phone as a display through the real VNC app 
+// enable VNC on the pi (sude raspi-config) at interface 
+
+SCRIPT 
+
+5. The photobooth script 
+
+// make a python photobooth file 
+nano photobooth.py
+
 
 
