@@ -17,7 +17,7 @@ mini photobooth using a Raspberry Pi 3 A+, which takes a picture with a fish hol
 4. the picture is printed immediatly after 
 5. the screen returns to idle waiting for the button to be pressed and process repeats
 
-##Requirements
+## Requirements
 - picamzero (camera)
 - escpos (printer)
 - RealVNC viewer app (display from phone)
