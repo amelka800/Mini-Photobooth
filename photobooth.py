@@ -1,3 +1,5 @@
+#!/home/amelka800/escpos-env/bin/python
+
 import time, threading, subprocess, queue
 import tkinter as tk
 from PIL import Image, ImageTk, ImageOps, ImageEnhance
