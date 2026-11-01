@@ -21,11 +21,11 @@ A DIY photobooth built on a Raspberry Pi. Press an arcade button, get a 3-2-1 co
 | Shoebox | Used as the frame/enclosure |
 | Alligator clip wires | Used for all connectors |
 
-## 1. Setting up the Pi
+### 1. Setting up the Pi
 
 Flash the pi OS with Raspberry pi Imager and enable SSH.
 
-## 2. Camera
+### 2. Camera
  
 1. Physically connect the camera to the Pi with the wide ribbon cable (power the Pi off first).
 2. Install the camera library:
@@ -51,7 +51,16 @@ You have to connect the printer to power and seperatly to the Pi which I used th
 ```bash
    sudo apt install python3-escpos
 ```
+
+   Install the virtual enviornment:
+   ```bash 
+   python3 -m venv --system-site-packages ~/escpos-env
+   ~/escpos-env/bin/pip install python-escpos pyusb pillow
+   sudo apt install -y python3-tk python3-pil.imagetk python3-gpiozero python3-lgpio libusb-1.0-0
+```
+
    (For the virtual environment used in this project, `escpos-env`, install `python-escpos` with pip inside it.)
+
 2. Find the printer's USB IDs:
 ```bash
    lsusb
@@ -165,4 +174,4 @@ DISPLAY=:0 ~/photobooth.py
 | Button does nothing | Check `pinctrl get 21` changes when pressed, and that both clips are firmly on the tabs, not the LED tabs |
 | Changing components | Note when changing components make sure to power off Pi |
 | Safe shutdown | sudo shutdown now |
-| Run without display | DISPLAY=:0 ~/photobooth.py|
+
