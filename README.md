@@ -173,5 +173,5 @@ DISPLAY=:0 ~/photobooth.py
 | Printer doesn't print | Re-check the USB IDs with `lsusb` |
 | Button does nothing | Check `pinctrl get 21` changes when pressed, and that both clips are firmly on the tabs, not the LED tabs |
 | Changing components | Note when changing components make sure to power off Pi |
-| Safe shutdown | sudo shutdown now |
+| Safe shutdown | `sudo shutdown now` |
 
