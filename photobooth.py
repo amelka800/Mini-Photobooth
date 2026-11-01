@@ -9,12 +9,11 @@ from escpos.printer import Usb, Serial
 # ---------- settings ----------
 BUTTON_PIN  = 21
 PHOTO       = "/home/amelka800/photo.jpg"
-PRINT_WIDTH = 384          # 58mm printer = 384, 80mm printer = 576
+PRINT_WIDTH = 384          
 COUNTDOWN   = 3
 
 def get_printer():
-    return Usb(0x0416, 0x5011)                              # change to your IDs
-    # return Serial(devfile="/dev/serial0", baudrate=9600)  # or use this for serial
+    return Usb(0x0416, 0x5011)                             
 # ------------------------------
 
 events = queue.Queue()
