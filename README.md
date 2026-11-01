@@ -21,7 +21,11 @@ A DIY photobooth built on a Raspberry Pi. Press an arcade button, get a 3-2-1 co
 | Shoebox | Used as the frame/enclosure |
 | Alligator clip wires | Used for all connectors |
 
-## 1. Camera
+## 1. Setting up the Pi
+
+Flash the pi OS with Raspberry pi Imager and enable SSH.
+
+## 2. Camera
  
 1. Physically connect the camera to the Pi with the wide ribbon cable (power the Pi off first).
 2. Install the camera library:
@@ -39,7 +43,7 @@ A DIY photobooth built on a Raspberry Pi. Press an arcade button, get a 3-2-1 co
 ```
    The `.` at the end means "download into the current folder".
  
-### 2. Thermal printer
+### 3. Thermal printer
 
 You have to connect the printer to power and seperatly to the Pi which I used through a micro USB data conversion cable (which I had from an old camera). A small light should be present on most printers to show they are on. 
  
@@ -85,7 +89,7 @@ chmod +x ~/test_print.py
  
 Now you can run it with just `~/test_print.py`.
  
-### 3. Arcade button
+### 4. Arcade button
  
 Wire the two button tabs to **physical pin 40 (GPIO 21)** and **physical pin 39 (GND)**. It doesn't matter which tab goes to which pin. No resistor is needed because the Pi's internal pull-up is used. Beware the button may hve appitional LED tabs. 
  
@@ -111,7 +115,7 @@ pause()
 
 If youre having issues you can directly run a spare wire through pin 39 to 40, to isolate if th eproblem is with the physical connection or the script
  
-### 4. Display
+### 5. Display
  
 An old phone is used as the display through the RealVNC Viewer app.
  
@@ -131,6 +135,26 @@ It ties the parts together: button press → countdown on the VNC screen → cam
 The window has to open on the Pi's desktop, so run it from a terminal on the phone:
 
 Press **Esc** to quit.
+
+## 6. Running the photobooth
+
+add a shebang at the beginning of the script 
+
+ ```` python 
+#!/home/amelka800/escpos-env/bin/python
+````
+
+Run the script with  
+
+```bash
+~/photobooth.py
+```
+
+or to run with no display run
+
+```bash
+DISPLAY=:0 ~/photobooth.py
+```
  
 ## Troubleshooting and Tips
  
