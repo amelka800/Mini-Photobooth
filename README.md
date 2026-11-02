@@ -21,7 +21,7 @@ A DIY photobooth built on a Raspberry Pi. Press an arcade button, get a 3-2-1 co
 | Shoebox | Used as the frame/enclosure |
 | Alligator clip wires | Used for all connectors |
 
-![pi](pb_pi.png)
+![pi](pb_pi.jpeg)
 
 ### 1. Setting up the Pi
 
