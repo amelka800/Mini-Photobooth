@@ -22,8 +22,6 @@ A DIY photobooth built on a Raspberry Pi. Press an arcade button, get a 3-2-1 co
 | Alligator clip wires | Used for all connectors |
 
 <img src="pb_pi.jpeg" alt="Pi" width="200" height="200">
-<img src="pb_front.jpeg" alt="Pi" width="200" height="200">
-<img src="pb_back.jpeg" alt="Pi" width="200" height="200">
 
 ### 1. Setting up the Pi
 
@@ -178,4 +176,7 @@ DISPLAY=:0 ~/photobooth.py
 | Button does nothing | Check `pinctrl get 21` changes when pressed, and that both clips are firmly on the tabs, not the LED tabs |
 | Changing components | Note when changing components make sure to power off Pi |
 | Safe shutdown | `sudo shutdown now` |
+
+<img src="pb_front.jpeg" alt="Pi" width="200" height="250">
+<img src="pb_back.jpeg" alt="Pi" width="200" height="250">
 
